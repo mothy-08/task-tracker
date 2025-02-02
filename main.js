@@ -41,7 +41,7 @@ function renderTasks() {
           opacity: [0, 1],
           transform: ["translateY(-100%)", "translateY(0)"],
         },
-        200
+        150
       );
     }
     taskList.appendChild(taskElement);
