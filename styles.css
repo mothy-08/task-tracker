@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+.lexend-light {
+  font-family: "Lexend", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+.lexend-regular {
+  font-family: "Lexend", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+:root {
+  --accent-color: hsl(0, 60%, 60%);
+  --neutral-color: hsl(60, 0%, 60%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid black;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font: var(--font-family);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  width: min(400px, 100% - 4rem);
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+.task-input {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid var(--neutral-color);
+  border-radius: 10px;
+  outline: none;
+}
+
+.task-input:focus {
+  border-color: black;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-task-button {
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  transition: opacity 0.2s ease, transform 0.2s ease-in-out;
+}
+
+.delete-task-button {
+  margin-left: auto;
+  border: none;
+  background: none;
+  color: var(--accent-color);
+  transition: opacity 0.2s ease, transform 0.2s ease-in-out;
+}
+
+.add-task-button:hover,
+.delete-task-button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.add-task-button:active,
+.delete-task-button:active {
+  transform: scale(1.2);
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+  list-style-type: none;
+}
+
+.task-element {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 4px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  aspect-ratio: 1;
+  border: 2px solid var(--neutral-color);
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]:checked {
+  background-color: black;
+  border-color: black;
+}
+
+input[type="checkbox"]::after {
+  content: "";
+  display: none;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  display: block;
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
