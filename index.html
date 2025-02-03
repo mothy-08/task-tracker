@@ -14,7 +14,10 @@
   <body class="lexend-regular">
     <main>
       <h1>Task Tracker</h1>
-      <div class="input-wrapper">
+      <div class="input-wrapper" role="form" aria-labelledby="task-input-label">
+        <label id="task-input-label" for="task-input" class="visually-hidden"
+          >New Task</label
+        >
         <input
           id="task-input"
           class="task-input"
@@ -22,15 +25,20 @@
           placeholder="Start writing and press enter to create task"
           autocomplete="off"
           autofocus
+          aria-describedby="task-input-description"
         />
+        <span id="task-input-description" class="visually-hidden"
+          >Press enter to add the task</span
+        >
         <button
           id="add-task-button"
           class="add-task-button material-symbols-outlined"
+          aria-label="Add task"
         >
           add
         </button>
       </div>
-      <ul id="task-list" class="task-list lexend-light"></ul>
+      <ul id="task-list" class="task-list lexend-light" role="list"></ul>
     </main>
   </body>
 </html>
