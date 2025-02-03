@@ -33,7 +33,7 @@ This project was built as part of the "Build a Task Tracker with JavaScript" cha
 
 1. Clone the repository:
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/mothy-08/task-tracker.git
    ```
 2. Open the project in VS Code.
 3. Install and enable the Live Server extension in VS Code.
